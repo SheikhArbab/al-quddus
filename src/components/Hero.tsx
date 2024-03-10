@@ -10,7 +10,7 @@ const Hero = () => {
 
     return (
         <section className="relative ">
-            <div className="w-full h-screen bg-black">
+            <div className="w-full h-fit bg-black">
 
                 <Carousel
                     infiniteLoop={true}
@@ -22,7 +22,7 @@ const Hero = () => {
                 >
                     {
                         true && [{ img: '/1.webp' }, { img: '/1.webp' }, { img: '/1.webp' }].map((v, i) =>
-                            <div className="relative w-full md:w-[101vw] h-screen overflow-hidden" key={i}>
+                            <div className="relative w-full h-[36dvh] sm:h-[50dvh] md:h-[70dvh] lg:h-screen overflow-hidden" key={i}>
                                 <Image fill src={v.img} className="w-full h-full object-cover" alt="/" />
                             </div>
                         )

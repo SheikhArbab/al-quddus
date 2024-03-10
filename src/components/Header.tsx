@@ -1,7 +1,7 @@
 "use client"
 import Image from 'next/image'
 import Link from 'next/link';
-import React, { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Search } from "@/components/index"
 import { LuShoppingCart } from "react-icons/lu";
 import { FaRegUser } from "react-icons/fa";
@@ -9,10 +9,26 @@ import { Nav } from "@/components/index";
 
 const Header = () => {
 
+  const [isScrolled, setIsScrolled] = useState(false);
+
   const [toggle, setToggle] = useState(true)
 
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      setIsScrolled(scrollTop > 30);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, []);
+
+
+
   return (
-    <header className={`${!toggle && 'bg-black'} duration-300 transition-all fixed z-50 left-0 right-0 top-0`}>
+    <header className={`${!toggle && 'bg-black'} ${isScrolled && 'bg-black'} hover:bg-black duration-300 transition-all fixed z-50 left-0 right-0 top-0`}>
 
       <div className="container mx-auto text-white flex items-center justify-between gap-2">
         <Link href={'/'} >

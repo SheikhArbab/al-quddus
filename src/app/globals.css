@@ -8,8 +8,8 @@
 }
  
 ::selection{
-  color: white;
-  background-color: var(--APrimary);
+  color:var(--APrimary);
+  background-color: black;
 }
 
 @layer base {
