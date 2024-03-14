@@ -1,6 +1,5 @@
 import * as C from "@/components/index";
-import type { Metadata } from "next";
-import Head from "next/head";
+import type { Metadata } from "next"; 
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -14,23 +13,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <Head>
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="shortcut icon" href="/favicon/android-chrome-192x192.png" type="image/x-icon" />
-        {/* Standard Favicon */}
-        <link rel="icon" href="/favicon/favicon.ico" />
-        {/* Apple Touch Icon */}
-        <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-touch-icon-57x57.png" />
-        <link rel="apple-touch-icon" sizes="72x72" href="/favicon/apple-touch-icon-72x72.png" />
-        <link rel="apple-touch-icon" sizes="114x114" href="/favicon/apple-touch-icon-114x114.png" />
-        <link rel="apple-touch-icon" sizes="144x144" href="/favicon/apple-touch-icon-144x144.png" />
-        {/* Android Chrome Icons */}
-        <link rel="manifest" href="/favicon/site.webmanifest" />
-        <meta name="msapplication-TileColor" content="#ffffff" />
-        <meta name="msapplication-TileImage" content="/favicon/mstile-144x144.png" />
-      </Head>
+    <html lang="en"> 
       <body>
         <C.Header />
         {children}

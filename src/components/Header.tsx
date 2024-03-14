@@ -28,7 +28,7 @@ const Header = () => {
 
 
   return (
-    <header className={`${!toggle && 'bg-black'} ${isScrolled && 'bg-black'} hover:bg-black duration-300 transition-all fixed z-50 left-0 right-0 top-0`}>
+    <header className={` ${isScrolled && 'fixed'} bg-black duration-300 transition-all w-full relative z-50 left-0 right-0 top-0`}>
 
       <div className="container mx-auto text-white flex items-center justify-between gap-2">
         <Link href={'/'} >
@@ -43,7 +43,7 @@ const Header = () => {
         <div className='flex items-center gap-2'>
 
           <div className='md:flex items-center gap-2 cursor-pointer hidden'>
-            <div className='flex items-center gap-2 duration-300 transition-all hover:text-APrimary'><FaRegUser /> Login</div>
+            <Link href={'/login'} className='flex items-center gap-2 duration-300 transition-all hover:text-APrimary'><FaRegUser /> Login</Link>
           </div>
 
           <button className='text-2xl duration-300 transition-all hover:text-APrimary'><LuShoppingCart /></button>

@@ -22,14 +22,13 @@ const Hero = () => {
                 >
                     {
                         true && [{ img: '/1.webp' }, { img: '/1.webp' }, { img: '/1.webp' }].map((v, i) =>
-                            <div className="relative w-full h-[36dvh] sm:h-[50dvh] md:h-[70dvh] lg:h-screen overflow-hidden" key={i}>
+                            <div className="relative w-full h-[36dvh] sm:h-[50dvh] md:h-[71dvh]  overflow-hidden" key={i}>
                                 <Image fill src={v.img} className="w-full h-full object-cover" alt="/" />
                             </div>
                         )
                     }
                 </Carousel>
-
-                <div className="absolute inset-0 bg-gradient-to-tr from-black" />
+ 
             </div>
         </section>
 
