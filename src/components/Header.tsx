@@ -1,11 +1,12 @@
 "use client"
 import Image from 'next/image'
 import Link from 'next/link';
+import { CiHeart } from "react-icons/ci";
 import { useEffect, useState } from 'react'
-import { Search } from "@/components/index"
-import { LuShoppingCart } from "react-icons/lu";
+import { Search } from "@/components/index" 
 import { FaRegUser } from "react-icons/fa";
 import { Nav } from "@/components/index";
+import { GiHanger } from "react-icons/gi";
 
 const Header = () => {
 
@@ -30,7 +31,7 @@ const Header = () => {
   return (
     <header className={` ${isScrolled && 'fixed'} bg-black duration-300 transition-all w-full relative z-50 left-0 right-0 top-0`}>
 
-      <div className="container mx-auto text-white flex items-center justify-between gap-2">
+<div className="container mx-auto text-white flex items-center justify-between gap-2">
         <Link href={'/'} >
           <Image alt='al-quddus' width={100} height={100} className='object-contain' src={'/al-quddus.png'} />
         </Link>
@@ -43,10 +44,15 @@ const Header = () => {
         <div className='flex items-center gap-2'>
 
           <div className='md:flex items-center gap-2 cursor-pointer hidden'>
-            <Link href={'/login'} className='flex items-center gap-2 duration-300 transition-all hover:text-APrimary'><FaRegUser /> Login</Link>
+            <Link href={'/login'} className='flex items-center gap-2 duration-300 transition-all hover:text-APrimary'><FaRegUser /></Link>
           </div>
 
-          <button className='text-2xl duration-300 transition-all hover:text-APrimary'><LuShoppingCart /></button>
+
+          <div className='text-2xl duration-300 transition-all hover:text-APrimary'>
+            <Link href={'/wishlist'} className='flex items-center gap-2 duration-300 transition-all hover:text-APrimary'><CiHeart /></Link>
+          </div>
+ 
+          <button className='text-2xl duration-300 transition-all hover:text-APrimary'><GiHanger /></button>
 
           <div className="switch md:hidden" onClick={() => setToggle(!toggle)} >
             <input type="checkbox" />

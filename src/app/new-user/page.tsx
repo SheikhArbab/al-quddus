@@ -1,11 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
-import { FcGoogle } from "react-icons/fc";
+import { GoogleLogin } from "@/components/index"
 
 export default function NewUser() {
     return (
-      <main className="fixed inset-0 z-[999999] bg-gray-100 overflow-x-hidden overflow-y-auto">
-      <div className="relative py-3 sm:max-w-xl sm:mx-auto">
+      <main className="fixed inset-0 z-[999999] bg-gray-100 overflow-x-hidden overflow-y-auto flex items-center justify-center">
+      <div className="relative py-3 w-[95%]  md:w-[500px] ">
         <div className="relative px-4 py-10 bg-white mx-8 md:mx-0 shadow rounded-3xl sm:p-10">
           <div className="max-w-md mx-auto">
             <Link href={'/'} className="relative w-32 mx-auto h-32 block">
@@ -60,10 +60,7 @@ export default function NewUser() {
             
             <div className="flex justify-center w-full items-center">
               <div className="w-full">
-                <button className="flex items-center justify-center py-2  bg-white hover:bg-gray-200 focus:ring-blue-500 focus:ring-offset-blue-200 text-gray-700 w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg ">
-                <FcGoogle />
-                  <span className="ml-2 text-xs md:text-sm">Sign in with Google</span>
-                </button> 
+              <GoogleLogin />
               </div>
             </div>
             <div className="mt-5">
@@ -78,7 +75,7 @@ export default function NewUser() {
               <span className="w-1/5 border-b dark:border-gray-600 md:w-1/4" />
               <Link
                 className="text-xs text-gray-500 uppercase dark:text-gray-400 hover:underline"
-                href="/new-user"
+                href="/login"
               >
                 or login
               </Link>

@@ -21,7 +21,7 @@ const Hero = () => {
                     showStatus={false}
                 >
                     {
-                        true && [{ img: '/1.webp' }, { img: '/1.webp' }, { img: '/1.webp' }].map((v, i) =>
+                        true && [{ img: '/1.png' }, { img: '/1.png' }, { img: '/1.png' }].map((v, i) =>
                             <div className="relative w-full h-[36dvh] sm:h-[50dvh] md:h-[71dvh]  overflow-hidden" key={i}>
                                 <Image fill src={v.img} className="w-full h-full object-cover" alt="/" />
                             </div>
